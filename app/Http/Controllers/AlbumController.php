@@ -61,7 +61,6 @@ class AlbumController extends Controller
         }
 
         return view('search', [
-            //dd($apiResults),
             'albums' => $albums,
             'apiResults' => $apiResults,
             'searchQuery' => $searchQuery
