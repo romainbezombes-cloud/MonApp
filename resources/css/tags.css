@@ -1,0 +1,324 @@
+        /* ── Reset & Base iOS 11 DA ── */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'SF Pro text', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            background-color: #EFEFF4;
+            color: #1c1c1e;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── Container principal (Minimalist iOS 11) ── */
+        .app-container {
+            background-color: #F5F5F5;
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            min-height: 90vh;
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        /* ── Top Navigation ── */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 32px 16px;
+        }
+
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            color: #007aff;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 500;
+            transition: opacity 0.2s ease;
+        }
+
+        .nav-link:hover {
+            opacity: 0.7;
+        }
+
+        .nav-link svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        /* ── Header ── */
+        .header {
+            padding: 0 32px;
+            margin-bottom: 24px;
+        }
+
+        .header h1 {
+            font-size: 34px;
+            font-weight: 700;
+            letter-spacing: -0.6px;
+            color: #000;
+            margin-bottom: 6px;
+        }
+
+        .header p {
+            font-size: 15px;
+            color: #8e8e93;
+            font-weight: 400;
+        }
+
+        /* ── Grouped Sections (iOS 11 Style) ── */
+        .section-group {
+            margin: 0 32px 32px;
+        }
+
+        .section-header {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #6c6c70;
+            letter-spacing: -0.1px;
+            margin-bottom: 8px;
+            padding-left: 4px;
+        }
+
+        .card-panel {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        /* ── Formulaire de création de Tag ── */
+        .tag-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .ios-input {
+            flex: 1;
+            background-color: #f2f2f7;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 16px;
+            color: #000;
+            font-family: inherit;
+            transition: background-color 0.2s ease;
+        }
+
+        .ios-input:focus {
+            outline: none;
+            background-color: #e5e5ea;
+        }
+
+        /* Sélecteur de couleur pastels iOS */
+        .color-picker-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .color-picker-label {
+            font-size: 14px;
+            color: #8e8e93;
+            font-weight: 500;
+        }
+
+        .color-swatch {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .color-swatch:hover {
+            transform: scale(1.15);
+        }
+
+        .color-swatch.active {
+            border-color: #000;
+            transform: scale(1.15);
+        }
+
+        .btn-ios {
+            background-color: #007aff;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-ios:hover {
+            background-color: #0062cc;
+        }
+
+        .btn-ios:active {
+            transform: scale(0.98);
+        }
+
+        .btn-ios-danger {
+            background-color: #ff3b30;
+        }
+
+        .btn-ios-danger:hover {
+            background-color: #d70015;
+        }
+
+        .btn-ios-secondary {
+            background-color: #e5e5ea;
+            color: #000;
+        }
+
+        .btn-ios-secondary:hover {
+            background-color: #d1d1d6;
+        }
+
+        /* ── Grille / Liste des Tags ── */
+        .tags-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .tag-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 18px 20px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            transition: transform 0.2s ease;
+        }
+
+        .tag-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tag-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 14px;
+            border-radius: 20px;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 15px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .tag-stats {
+            font-size: 14px;
+            color: #8e8e93;
+            font-weight: 500;
+        }
+
+        .tag-actions {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .action-icon-btn {
+            background: #f2f2f7;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #007aff;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .action-icon-btn:hover {
+            background: #e5e5ea;
+        }
+
+        .action-icon-btn.danger {
+            color: #ff3b30;
+        }
+
+        /* ── Albums associés au Tag ── */
+        .tag-albums-preview {
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid #f2f2f7;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+        }
+
+        .empty-albums-text {
+            font-size: 13px;
+            color: #c7c7cc;
+            font-style: italic;
+        }
+
+        .mini-album-cover {
+            width: 44px;
+            height: 44px;
+            border-radius: 6px;
+            object-fit: cover;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .mini-album-cover:hover {
+            transform: scale(1.1);
+        }
+
+        /* ── Formulaire d'Édition Inline ── */
+        .edit-form-container {
+            display: none;
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid #f2f2f7;
+        }
+
+        .edit-form-container.active {
+            display: block;
+        }
+
+        .edit-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
